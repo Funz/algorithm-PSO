@@ -22,11 +22,7 @@ jobs:
         java-package: jdk
     - uses: r-lib/actions/setup-r@v1
       with:
-        r-version: 3.6
-    - if: matrix.os == 'macos-latest'
-      run: |
-        ln -s /Library/Frameworks/R.framework/Versions/3.6 /Library/Frameworks/R.framework/Versions/3.5
-        echo "/Library/Frameworks/R.framework/Resources/bin" >> $GITHUB_PATH
+        r-version: 4.2
     - uses: r-lib/actions/setup-pandoc@v1
     - run: |
         WD=$PWD
